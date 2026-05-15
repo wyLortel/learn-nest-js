@@ -5,7 +5,7 @@ import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 //애플리케이션 루트 모듈을 가져옴
-import { AppModule } from './app.module';
+import { AppModule } from './modules/app/app.module';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 
 //비동기 함수로 애플리케이션 초기 설정을 시작
