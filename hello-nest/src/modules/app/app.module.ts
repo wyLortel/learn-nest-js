@@ -6,6 +6,7 @@ import { UsersService } from '../../users/users.service';
 import { BoardModule } from '../../board/board.module';
 import { ClassroomModule } from '../../classroom/classroom.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TasksModule } from '../tasks/task.module';
 
 @Module({
   imports: [
@@ -35,7 +36,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         synchronize: configService.get('NODE_ENV') === 'development',
       }),
     }),
-
+    TasksModule,
     BoardModule,
     ClassroomModule,
   ],
